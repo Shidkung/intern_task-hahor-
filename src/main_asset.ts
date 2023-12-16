@@ -25,11 +25,11 @@ async function bootstrap() {
   const apiService = app.get(ApiService);
   // Process Assets CSV
   try {
-    const data = await apiService.login('dev-script@hahor.com','scriptHaH24!')
+  const data = await apiService.login('dev-script@hahor.com','scriptHaH24!')
   // Process Projects CSV
-  const projectCsvFilePath = 'csv/hahor_project.csv';
-  await processProjects(apiService, projectCsvFilePath,data.access_token);
-  console.log("Project Success")
+  //const projectCsvFilePath = 'csv/hahor_project.csv';
+ // await processProjects(apiService, projectCsvFilePath,data.access_token);
+  //console.log("Project Success")
   const check = await apiService.getproject(data.access_token);
   console.log("Check Success")
     const assetCsvFilePath = 'csv/hahorasset.csv';
